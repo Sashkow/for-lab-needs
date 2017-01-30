@@ -4,19 +4,19 @@ This is a repository to address minor bioinformatics-related needs of Systems Bi
 
 ## Features 
 
-	* some.py - splits double strain DNA into single strain semi-overlapping pieces of reasonably similar melting temperature in segments of overlap; this allows to recreate original DNA from smaller pieces by mixing them together and iteratively heating/cooling the mixture.
+* some.py - splits double strain DNA into single strain semi-overlapping pieces of reasonably similar melting temperature in segments of overlap; this allows to recreate original DNA from smaller pieces by mixing them together and iteratively heating/cooling the mixture.
 
 
 ## Getting Started
 
-	```
-	python some.py ATATAGATTACAATATA
-	```
-	or just
-	```
-	python some.py
-	```
-	If unspecified as a parameter sequence shall be retreived from `input.txt` file of the same folder as `some.py`
+```
+python some.py ATATAGATTACAATATA
+```
+or just
+```
+python some.py
+```
+If unspecified as a parameter sequence shall be retreived from `input.txt` file of the same folder as `some.py`
 
 ### Prerequisites
 
@@ -24,14 +24,14 @@ python3, pip, virtualenv
 
 ### Installing
 
-	```
-	git clone https://github.com/Sashkow/for-lab-needs.git
-	cd for-lab-needs
-	virtualenv -p python3 env
-	source env/bin/activate
-	pip install -r requirements.txt
-	python some.py
-	```
+```
+git clone https://github.com/Sashkow/for-lab-needs.git
+cd for-lab-needs
+virtualenv -p python3 env
+source env/bin/activate
+pip install -r requirements.txt
+python some.py
+```
 
 <!-- ## Running the tests
 
@@ -83,4 +83,4 @@ This project is licensed under the GNU General Public License - see the [LICENSE
 
 ## Acknowledgments
 
-	* Wiss for the idea and contribution
+* Wiss for the idea and contribution
