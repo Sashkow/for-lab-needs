@@ -1,13 +1,22 @@
 """
 This module takes forward nucleotide sequence of double strain DNA
 and retuns a list of sequences of single strain DNA subsequences
-that constitute original double strain DNA when put together.
+that constitute the original double strain DNA when put together.
+
+The initial nucleotide sequence is taken either as the first argument
+from the conslole or from initial.txt file if unspecified. The result
+is printed to console.
 
 The idea is to split double strain DNA into single strain 
 semi-overlaping pieces with segments of overlap having reasonably
 similar melting temperatures. This way the original DNA sequence can
-be recreated from these pieces by mixing them together and iteratively
-heating them to a common melting temperature and cooling down.
+be recreated from these pieces by mixing them together, heating them
+to a common melting temperature and iteratively heating/cooling them
+until the desired DNA is created.
+_______ ______
+||||||||||||||...
+    ||||||||||||||...
+    _______ ______
 
 This method of building DNA sequences may reduce costs of building DNA
 sequences de novo.
