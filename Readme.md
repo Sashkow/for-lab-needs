@@ -2,9 +2,20 @@
 
 This is a repository to address minor bioinformatics-related needs of Systems Biology lab at IMBG of NASU.
 
-## Features 
+## some.py 
 
-* some.py - splits double strain DNA into single strain semi-overlapping pieces of reasonably similar melting temperature in segments of overlap; this allows to recreate original DNA from smaller pieces by mixing them together and iteratively heating/cooling the mixture.
+This module takes forward nucleotide sequence of double strain DNA and retuns a list of sequences of single strain DNA subsequences that constitute the original double strain DNA when put together.
+
+The initial nucleotide sequence is taken either as the first argument from the conslole or from initial.txt file if unspecified. The result is printed to console.
+
+The idea is to split double strain DNA into single strain semi-overlaping pieces with segments of overlap having reasonably similar melting temperatures. This way the original DNA sequence can be recreated from these pieces by mixing them together, heating them to a common melting temperature and iteratively heating/cooling them until the desired DNA is created.
+
+_______ ______
+||||||||||||||...
+    ||||||||||||||...
+    _______ ______
+
+This method of building DNA sequences may reduce costs of building DNA sequences de novo.
 
 
 ## Getting Started
@@ -64,7 +75,8 @@ Add additional notes about how to deploy this on a live system
 
 <!-- ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please re
+ad [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
