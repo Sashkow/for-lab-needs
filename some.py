@@ -1,13 +1,13 @@
 """
-This module takes forward nucleotide sequence of double strain DNA
-and retuns a list of sequences of single strain DNA subsequences
-that constitute the original double strain DNA when put together.
+This module takes forward nucleotide sequence of double strand DNA
+and retuns a list of sequences of single strand DNA subsequences
+that constitute the original double strand DNA when put together.
 
 The initial nucleotide sequence is taken either as the first argument
 from the conslole or from initial.txt file if unspecified. The result
 is printed to console.
 
-The idea is to split double strain DNA into single strain 
+The idea is to split double strand DNA into single strand 
 semi-overlaping pieces with segments of overlap having reasonably
 similar melting temperatures. This way the original DNA sequence can
 be recreated from these pieces by mixing them together, heating them
@@ -183,9 +183,9 @@ def rev_complement(full):
     return res
 
 
-def to_single_strain_subsequences(sequence, acceptable_range=6):
+def to_single_strand_subsequences(sequence, acceptable_range=6):
     """
-    Split double strain sequence into single strain subsequences of
+    Split double strand sequence into single strand subsequences of
     melting temperatures that are within temperature_range.
     """
     seq = Seq(sequence)
@@ -207,12 +207,12 @@ def to_single_strain_subsequences(sequence, acceptable_range=6):
     print("Maximal temperature:", max(temps))
     print("Temperature range:", max(temps) - min(temps))
 
-    first_strain = [str(subseq) for index, subseq in enumerate(com_seq) if index % 2 == 0]
-    second_strain = [str(subseq) for index, subseq in enumerate(com_seq) if index % 2 == 1]
+    first_strand = [str(subseq) for index, subseq in enumerate(com_seq) if index % 2 == 0]
+    second_strand = [str(subseq) for index, subseq in enumerate(com_seq) if index % 2 == 1]
 
     # todo make assertions
-    print(len("".join(first_strain)), len(str(seq)))
-    print(len("".join(second_strain)), len(str(seq)))
+    print(len("".join(first_strand)), len(str(seq)))
+    print(len("".join(second_strand)), len(str(seq)))
 
     # test if sequence can be constructed 
 
@@ -231,7 +231,7 @@ def main(argv):
             return
 
     print("Analysing sequence", sequence[:100], "...")
-    subsequences = to_single_strain_subsequences(sequence)
+    subsequences = to_single_strand_subsequences(sequence)
     print("Results:")
     for subsequence in subsequences:
         print(subsequence)

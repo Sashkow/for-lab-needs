@@ -10,11 +10,6 @@ The initial nucleotide sequence is taken either as the first argument from the c
 
 The idea is to split double strain DNA into single strain semi-overlaping pieces with segments of overlap having reasonably similar melting temperatures. This way the original DNA sequence can be recreated from these pieces by mixing them together, heating them to a common melting temperature and iteratively heating/cooling them until the desired DNA is created.
 
-_______ ______
-||||||||||||||...
-    ||||||||||||||...
-    _______ ______
-
 This method of building DNA sequences may reduce costs of building DNA sequences de novo.
 
 
